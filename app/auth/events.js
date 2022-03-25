@@ -16,7 +16,26 @@ const onSignUp = function (event) {
     .then(() => authUi.onSignUpSuccess())
     .catch(() => authUi.onSignUpFailure())
 }
+const onSignIn = function (event) {
+  event.preventDefault()
+  const form = event.target
+  const data = getFormFields(form)
+  console.log(data)
+
+  authApi
+    .signIn(data)
+    .then((response) => authUi.onSignInSuccess(response))
+    .catch(() => authUi.onSignInFailure())
+}
+const onSignOut = function () {
+  authApi
+    .signOut()
+    .then(() => authUi.onSignOutSuccess())
+    .catch(() => authUi.onSignOutFailure())
+}
 
 module.exports = {
-  onSignUp
+  onSignUp,
+  onSignIn,
+  onSignOut
 }
