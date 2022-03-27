@@ -5,7 +5,7 @@ const getFormFields = require('../../lib/get-form-fields.js')
 
 const onSignUp = function (event) {
   event.preventDefault()
-  console.log('Im in event!')
+  // console.log('Im in event!')
   // getting data from form
   const form = event.target
   const data = getFormFields(form)
