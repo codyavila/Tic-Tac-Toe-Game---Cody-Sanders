@@ -8,7 +8,7 @@ const startGame = function () {
     headers: {
       Authorization: 'Bearer ' + store.user.token
     },
-    body: '{}'
+    body: {}
   })
 }
 
