@@ -11,5 +11,5 @@ $(() => {
   $('#sign-in-form').on('submit', authEvents.onSignIn)
   $('#sign-out-button').on('click', authEvents.onSignOut)
   // game events
-  $('#game-start').on('submit', gameEvents.onGameStart)
+  $('#game-start').on('click', gameEvents.onGameStart)
 })
