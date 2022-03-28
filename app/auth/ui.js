@@ -20,7 +20,7 @@ const onSignInSuccess = function (response) {
 
   store.user = response.user
 
-  console.log(response)
+  // console.log(response)
   // store data from the response in my store object
   // store.user = response.user
 
