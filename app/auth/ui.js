@@ -25,7 +25,7 @@ const onSignInSuccess = function (response) {
   // store.user = response.user
 
   // reset single form
-  // $('#sign-in-form').trigger('reset')
+  $('#sign-in-form').trigger('reset')
 }
 
 const onSignInFailure = function () {

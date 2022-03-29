@@ -13,4 +13,5 @@ $(() => {
   // game events
   $('#game-start').on('click', gameEvents.onGameStart)
   $('.box').on('click', gameEvents.boxClick)
+  $('#game-restart').on('click', gameEvents.onRestartGame)
 })
