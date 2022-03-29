@@ -12,11 +12,9 @@ const onGameStart = function (event) {
   store.over = false
   store.cells = ['', '', '', '', '', '', '', '', '']
   event.preventDefault()
-  gameApi
-    .startGame()
+  gameApi.startGame()
     .then((response) => gameUi.onGameStartSuccess(response))
     .catch(() => gameUi.onGameStartFailure)
-  console.log(event)
 }
 
 const switchPlayer = function () {
@@ -27,22 +25,31 @@ const switchPlayer = function () {
   }
 }
 
-const cellClick = function (event) {
-  // if the cell clicked is both empty and the game is not over...
-  if ($(event.target).text() === '' && store.over === false) {
+const boxClick = function (event) {
+  if ($(event.target).html() === '' && store.over === false) {
     if (store.currentPlayer === store.player1) {
       store.cells[event.target.id] = 'X'
       $(event.target).html('X')
+      gameApi.updateGame('X', store.game._id, false)
       switchPlayer()
     } else if (store.currentPlayer === store.player2) {
       store.cells[event.target.id] = 'O'
       $(event.target).html('O')
+      gameApi.updateGame('O', store.game._id, false)
       switchPlayer()
     }
+    console.log(store.cells)
   }
+}
+
+const onUpdateGame = function (event) {
+  event.preventDefault()
+  // clear board but don't refresh page
+  gameApi.startGame()
 }
 module.exports = {
   onGameStart,
   switchPlayer,
-  cellClick
+  boxClick,
+  onUpdateGame
 }

@@ -1,23 +1,21 @@
 @import '~bootstrap/scss/bootstrap';
 body {
-  background-color: pink;
-  font-family: 'Sigmar One', cursive;
+
   text-align: center;
     justify-content: center;
     align-items: center;
 }
 
 .box {
-  background-color: purple;
+  justify-content: center;
   border: solid black 3px;
-  border-radius: 10px;
   font-size: 80px;
   height: 140px;
-  text-align: center;
-    &:hover {
-    background-color: orange;
+   text-align: center;
+//     &:hover {
+//     background-color: orange;
   }
-}
+
 
 .board {
   // display: none;
@@ -27,9 +25,4 @@ body {
 
 .row {
   color: orange;
-}
-
-.panel {
-  background-color: purple;
-  padding: 10px;
 }
