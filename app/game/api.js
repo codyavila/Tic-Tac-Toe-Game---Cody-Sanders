@@ -4,7 +4,7 @@ const store = require('../store.js')
 const startGame = function () {
   return $.ajax({
     method: 'POST',
-    url: 'https://tic-tac-toe-api-development.herokuapp.com/games',
+    url: 'https://tic-tac-toe-api-production.herokuapp.com/games',
     headers: {
       Authorization: 'Bearer ' + store.user.token
     },
@@ -14,7 +14,7 @@ const startGame = function () {
 
 const indexOfGame = function () {
   return $.ajax({
-    url: 'https://tic-tac-toe-api-development.herokuapp.com/games',
+    url: 'https://tic-tac-toe-api-production.herokuapp.com/games',
     method: 'GET',
     headers: {
       Authorization: 'Bearer ' + store.user.token
@@ -29,7 +29,7 @@ const indexOfGame = function () {
 
 const updateGame = function (value, index, status) {
   return $.ajax({
-    url: 'https://tic-tac-toe-api-development.herokuapp.com/games/' + store.game._id,
+    url: 'https://tic-tac-toe-api-production.herokuapp.com/games' + store.game._id,
     method: 'PATCH',
     headers: {
       Authorization: 'Bearer ' + store.user.token
