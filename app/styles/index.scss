@@ -2,25 +2,22 @@
 body {
     text-align: center;
     justify-content: center;
-    align-items: center;
+    text-align: center;
 }
 
 .box {
-  justify-content: center;
-  border: solid black 3px;
-  font-size: 80px;
-  height: 140px;
-   text-align: center;
-     &:hover {
-     background-color: grey;
-     }
+  border: solid black 5px;
+  font-size: 115px;
+  height: 250px;
+  text-align: center;
+  &:hover {
+    background-color: grey;
+    }
   }
 
 
 .board {
-  // display: none;
-  margin: auto;
-  width: 90%;
+    margin: auto;
 }
 
 .row {

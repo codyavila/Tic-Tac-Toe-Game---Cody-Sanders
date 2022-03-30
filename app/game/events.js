@@ -26,21 +26,21 @@ const switchPlayer = function () {
 }
 
 const boxClick = function (event) {
-  if ($(event.target).html() === '' && store.over === false) {
+  if ($(event.target).html() === '' && store.game.over === false) {
     if (store.currentPlayer === store.player1) {
       store.cells[event.target.id] = 'X'
       $(event.target).html('X')
       gameApi.updateGame('X', store.game._id, false)
+      checkForTie()
       checkForWin()
       switchPlayer()
-      checkForTie()
     } else if (store.currentPlayer === store.player2) {
       store.cells[event.target.id] = 'O'
       $(event.target).html('O')
       gameApi.updateGame('O', store.game._id, false)
-      checkForWin()
-      switchPlayer()
       checkForTie()
+      switchPlayer()
+      checkForWin()
     }
     console.log(store.cells)
   }
@@ -117,7 +117,8 @@ const clearBoard = function () {
   store.game.over = false
   store.cells = ['', '', '', '', '', '', '', '', '']
   $('.board').css('display', 'block')
-  $('.box').text('')
+  $('.box').html('')
+  $('#game-display').html('')
 }
 
 const checkForTie = function () {
