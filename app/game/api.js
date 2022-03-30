@@ -29,7 +29,7 @@ const indexOfGame = function () {
 
 const updateGame = function (value, index, status) {
   return $.ajax({
-    url: 'https://tic-tac-toe-api-production.herokuapp.com/games' + store.game._id,
+    url: 'https://tic-tac-toe-api-production.herokuapp.com/games/' + store.game._id,
     method: 'PATCH',
     headers: {
       Authorization: 'Bearer ' + store.user.token
