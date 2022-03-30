@@ -13,7 +13,8 @@ const onSignUpFailure = function () {
 }
 
 const onSignInSuccess = function (response) {
-  $('.game-object').show()
+  $('.sign-out').show()
+  $('#game-start').show()
   $('#auth-display').html('<p>User signed in successfully</p>')
 
   // reset all forms
