@@ -1,5 +1,5 @@
 ## **Welcome to my Tic Tac Toe Game!**
-======================================
+--------------------------------------
 **A Tic Tac Toe game that allows you to restart the game, sign up, sign in, and log out. The user will play for both sides, and will be alerted if X won or O won.**
 
 ## **GitHub Links**
@@ -16,4 +16,4 @@ Project repository: https://github.com/sanderscody26/Tic-Tac-Toe-Game---Cody-San
 
 ## **First Wireframe Drawing**
 
-!(https://i.imgur.com/KJCHgSS.jpg)
+https://i.imgur.com/KJCHgSS.jpg
