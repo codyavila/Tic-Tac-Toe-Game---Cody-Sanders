@@ -1,4 +1,9 @@
+'use strict'
+
 const store = require('../store.js')
+const gameApi = require('./api.js')
+const gameEvents = require('./events.js')
+
 // const events = require('./events.js')
 
 const onGameStartSuccess = function (response) {
@@ -25,5 +30,4 @@ module.exports = {
   onGameStartFailure,
   xWinCondition,
   oWinCondition
-
 }

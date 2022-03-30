@@ -17,21 +17,22 @@
       <!--Sign Up-->
       <h3>Sign Up!</h3>
       <form id="sign-up-form">
-        <input name="credentials[email]" type="text" placeholder="an@example.email">
-        <input name="credentials[password]" type="password" placeholder="an example password">
-        <input name="credentials[password_confirmation]" type="password" placeholder="an example password">
+        <input name="credentials[email]" type="email" placeholder="mail@email.com">
+        <input name="credentials[password]" type="password" placeholder="Password">
+        <input name="credentials[password_confirmation]" type="password" placeholder="Confirm Password">
         <button type="submit">Sign Up</button>
       </form>
       <!--Sign In-->
       <form id="sign-in-form">
         <h3>Sign In</h3>
-        <input name="credentials[email]" type="text" placeholder="an@example.email">
-        <input name="credentials[password]" type="password" placeholder="an example password">
+        <input name="credentials[email]" type="email" placeholder="mail@email.com">
+        <input name="credentials[password]" type="password" placeholder="Password">
         <button type="submit">Sign In</button>
       </form>
       <!--Sign Out-->
       <h3>Sign Out</h3>
       <button id="sign-out-button">Sign Out</button>
+      <section class="game-object">
       <form id="game-start">
         <h1>Start New Game!</h1>
         <button>Start New Game Here!</button>
@@ -39,8 +40,6 @@
       <button id="game-restart">Restart</button>
       <!--Div for Auth Messages-->
       <section id="auth-display"></section>
-    </body>
-
     <!--Game Board-->
     <div class="col-12 col-lg-6 panel">
       <div class="board">
@@ -61,5 +60,7 @@
         </div>
       </div>
     </div>
+  </section>
     <section id="game-display"></section>
+    </body>
 </html>

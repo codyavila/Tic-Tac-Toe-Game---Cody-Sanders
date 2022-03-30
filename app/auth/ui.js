@@ -13,6 +13,7 @@ const onSignUpFailure = function () {
 }
 
 const onSignInSuccess = function (response) {
+  $('.game-object').show()
   $('#auth-display').html('<p>User signed in successfully</p>')
 
   // reset all forms
@@ -26,6 +27,7 @@ const onSignInSuccess = function (response) {
 
   // reset single form
   $('#sign-in-form').trigger('reset')
+  $('game-object').show()
 }
 
 const onSignInFailure = function () {
@@ -33,6 +35,7 @@ const onSignInFailure = function () {
 }
 
 const onSignOutSuccess = function () {
+  $('.game-object').hide()
   $('#auth-display').html('<p>User signed out successfully</p>')
 
   $('form').trigger('reset')

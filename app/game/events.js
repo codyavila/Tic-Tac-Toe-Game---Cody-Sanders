@@ -111,6 +111,7 @@ const checkForWin = function () {
 }
 
 const clearBoard = function () {
+  store.currentPlayer = 'X'
   store.game.over = false
   store.cells = ['', '', '', '', '', '', '', '', '']
   $('.board').css('display', 'block')
