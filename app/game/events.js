@@ -33,12 +33,14 @@ const boxClick = function (event) {
       gameApi.updateGame('X', store.game._id, false)
       checkForWin()
       switchPlayer()
+      checkForTie()
     } else if (store.currentPlayer === store.player2) {
       store.cells[event.target.id] = 'O'
       $(event.target).html('O')
       gameApi.updateGame('O', store.game._id, false)
       checkForWin()
       switchPlayer()
+      checkForTie()
     }
     console.log(store.cells)
   }
@@ -116,6 +118,15 @@ const clearBoard = function () {
   store.cells = ['', '', '', '', '', '', '', '', '']
   $('.board').css('display', 'block')
   $('.box').text('')
+}
+
+const checkForTie = function () {
+  for (let i = 0; i < store.cells.length; i++) {
+    if (store.cells[i] === '') {
+      return false
+    }
+  }
+  gameUi.onTieCondition()
 }
 
 module.exports = {

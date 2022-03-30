@@ -27,9 +27,15 @@ const oWinCondition = function () {
   $('#game-display').html('<p>O Wins! Better luck next time X!</p>')
 }
 
+const onTieCondition = function () {
+  store.game.over = false
+  $('#game-display').html('<p>Looks like a stalemate! Hit restart to try again or log out.</p>')
+}
+
 module.exports = {
   onGameStartSuccess,
   onGameStartFailure,
   xWinCondition,
-  oWinCondition
+  oWinCondition,
+  onTieCondition
 }

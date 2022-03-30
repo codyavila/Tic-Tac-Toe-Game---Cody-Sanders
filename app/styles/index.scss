@@ -11,8 +11,9 @@ body {
   font-size: 80px;
   height: 140px;
    text-align: center;
-//     &:hover {
-//     background-color: orange;
+     &:hover {
+     background-color: grey;
+     }
   }
 
 
@@ -23,5 +24,6 @@ body {
 }
 
 .row {
-  color: orange;
+    justify-content: center;
+    color: orange;
 }
