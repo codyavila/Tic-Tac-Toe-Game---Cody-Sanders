@@ -1,0 +1,26 @@
+@import '~bootstrap/scss/bootstrap';
+body {
+    text-align: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.box {
+  border: solid black 5px;
+  font-size: 115px;
+  height: 250px;
+  text-align: center;
+  &:hover {
+    background-color: grey;
+    }
+  }
+
+
+.board {
+    margin: auto;
+}
+
+.row {
+    justify-content: center;
+    color: orange;
+}

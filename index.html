@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Tic-Tac-Toe</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <!--Title-->
+      <h1>Tic-Tac-Toe!</h1>
+      <!--Sign Up-->
+      <h3>Sign Up!</h3>
+      <form id="sign-up-form">
+        <input name="credentials[email]" type="email" placeholder="mail@email.com">
+        <input name="credentials[password]" type="password" placeholder="Password">
+        <input name="credentials[password_confirmation]" type="password" placeholder="Confirm Password">
+        <button type="submit">Sign Up</button>
+      </form>
+      <!--Sign In-->
+      <form id="sign-in-form">
+        <h3>Sign In</h3>
+        <input name="credentials[email]" type="email" placeholder="mail@email.com">
+        <input name="credentials[password]" type="password" placeholder="Password">
+        <button type="submit">Sign In</button>
+      </form>
+      <!--Div for Auth Messages-->
+      <section id="auth-display"></section>
+      <!--Sign Out-->
+      <h3 class="sign-out">Sign Out</h3>
+      <button class="sign-out">Sign Out</button>
+      <!--Start Game Button-->
+      <form id="game-start">
+        <button>Start New Game Here!</button>
+      </form>
+      <section id="game-board">
+      <button id="game-restart">Restart</button>
+    <!--Game Board-->
+    <div class="col-12 col-lg-6 panel">
+      <div class="board">
+        <div class="row">
+          <div id="0" class="col-4 column box"></div>
+          <div id="1" class="col-4 column box"></div>
+          <div id="2" class="col-4 column box"></div>
+        </div>
+        <div class="row">
+          <div id="3" class="col-4 column box"></div>
+          <div id="4" class="col-4 column box"></div>
+          <div id="5" class="col-4 column box"></div>
+        </div>
+        <div class="row">
+          <div id="6" class="col-4 column box"></div>
+          <div id="7" class="col-4 column box"></div>
+          <div id="8" class="col-4 column box"></div>
+        </div>
+      </div>
+    </div>
+    </section>
+    <section id="game-display"></section>
+    </body>
+</html>
