@@ -33,24 +33,35 @@ const boxClick = function (event) {
   if ($(event.target).html() === '' && store.game.over === false) {
     // if player 1 is strictly equal to player current player
     if (store.currentPlayer === store.player1) {
+      // adds string to index
       store.cells[event.target.id] = 'X'
+      // Adds html string to cell target
       $(event.target).html('X')
       gameApi.updateGame('X', store.game._id, false)
+      // runs check for tie loop
       checkForTie()
+      // Runs check for win function if statements
       checkForWin()
+      // runs switch player if condition
       switchPlayer()
     } else if (store.currentPlayer === store.player2) {
+      // if player 1 is strictly equal to player current player
       store.cells[event.target.id] = 'O'
+      // adds string to index
       $(event.target).html('O')
       gameApi.updateGame('O', store.game._id, false)
+      // runs check for tie loop
       checkForTie()
+      // runs switch player if condition
       switchPlayer()
+      // Runs check for win function if statements
       checkForWin()
     }
     console.log(store.cells)
   }
 }
 
+// restart game function
 const onRestartGame = function (event) {
   event.preventDefault()
   clearBoard()
@@ -59,64 +70,76 @@ const onRestartGame = function (event) {
 
 const checkForWin = function () {
   const cells = store.cells
-  // for horizontal wins X
+  // X WINS
+  // X Top Row
   if (cells[0] === 'X' && cells[1] === 'X' && cells[2] === 'X') {
     store.game.over = true
     gameUi.xWinCondition()
+    // X Middle Row
   } else if (cells[3] === 'X' && cells[4] === 'X' && cells[5] === 'X') {
     store.game.over = true
     gameUi.xWinCondition()
+    // X Bottom Row
   } else if (cells[6] === 'X' && cells[7] === 'X' && cells[8] === 'X') {
     store.game.over = true
     gameUi.xWinCondition()
-    // for vertical wins for X
+    // X Left Column
   } else if (cells[0] === 'X' && cells[3] === 'X' && cells[6] === 'X') {
     store.game.over = true
     gameUi.xWinCondition()
+    // X Middle Column
   } else if (cells[1] === 'X' && cells[4] === 'X' && cells[7] === 'X') {
     store.game.over = true
     gameUi.xWinCondition()
+    // X Right Column
   } else if (cells[2] === 'X' && cells[5] === 'X' && cells[8] === 'X') {
     store.game.over = true
     gameUi.xWinCondition()
-    // for diagonal wins for X
+    // Left X Down Diag
   } else if (cells[0] === 'X' && cells[4] === 'X' && cells[8] === 'X') {
     store.game.over = true
     gameUi.xWinCondition()
+    // Right X Down Diag
   } else if (cells[2] === 'X' && cells[4] === 'X' && cells[6] === 'X') {
     store.game.over = true
     gameUi.xWinCondition()
-    // for horizontal wins for O
+    // O WINS
+    // O Top Row
   } else if (cells[0] === 'O' && cells[1] === 'O' && cells[2] === 'O') {
     store.game.over = true
     gameUi.oWinCondition()
+    // O Middle Row
   } else if (cells[3] === 'O' && cells[4] === 'O' && cells[5] === 'O') {
     store.game.over = true
     gameUi.oWinCondition()
+    // O Bottom Row
   } else if (cells[6] === 'O' && cells[7] === 'O' && cells[8] === 'O') {
     store.game.over = true
     gameUi.oWinCondition()
-    // for vertical wins for O
+    // O Left Column
   } else if (cells[0] === 'O' && cells[3] === 'O' && cells[6] === 'O') {
     store.game.over = true
     gameUi.oWinCondition()
+    // O Middle Column
   } else if (cells[1] === 'O' && cells[4] === 'O' && cells[7] === 'O') {
     store.game.over = true
     gameUi.oWinCondition()
+    // O Right Column
   } else if (cells[2] === 'O' && cells[5] === 'O' && cells[8] === 'O') {
     store.game.over = true
     gameUi.oWinCondition()
-    // for diagonal wins for O
+    // Left O Down Diag
   } else if (cells[0] === 'O' && cells[4] === 'O' && cells[8] === 'O') {
     store.game.over = true
     gameUi.oWinCondition()
+    // Right O Down Diag
   } else if (cells[2] === 'O' && cells[4] === 'O' && cells[6] === 'O') {
     store.game.over = true
     gameUi.oWinCondition()
   }
-  console.log(store.game.over)
 }
 
+// Clears the board and resets all settings
 const clearBoard = function () {
   store.currentPlayer = 'X'
   store.game.over = false
@@ -126,12 +149,14 @@ const clearBoard = function () {
   $('#game-display').html('')
 }
 
+// for loop to check if cell index is blank or not
 const checkForTie = function () {
   for (let i = 0; i < store.cells.length; i++) {
     if (store.cells[i] === '') {
       return false
     }
   }
+  // once return = true, run this function
   gameUi.onTieCondition()
 }
 
