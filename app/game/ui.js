@@ -8,6 +8,7 @@ const store = require('../store.js')
 
 const onGameStartSuccess = function (response) {
   $('#game-board').show()
+  $('#game-display').show()
   console.log(response)
   store.game = response.game
   store.gameId = response.game.id

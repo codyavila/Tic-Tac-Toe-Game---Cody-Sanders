@@ -35,6 +35,7 @@ const onSignInFailure = function () {
 }
 
 const onSignOutSuccess = function () {
+  $('#game-display').hide()
   $('#game-start').hide()
   $('#game-board').hide()
   $('#auth-display').html('<p>User signed out successfully</p>')
