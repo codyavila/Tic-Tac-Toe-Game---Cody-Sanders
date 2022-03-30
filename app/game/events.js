@@ -5,6 +5,7 @@ const gameApi = require('./api.js')
 const store = require('../store.js')
 // const getFormFields = require('../../lib/get-form-fields.js')
 
+// Function for when the game initiates
 const onGameStart = function (event) {
   store.player1 = 'X'
   store.player2 = 'O'
@@ -17,6 +18,7 @@ const onGameStart = function (event) {
     .catch(() => gameUi.onGameStartFailure)
 }
 
+// Function to check player string and switch strings
 const switchPlayer = function () {
   if (store.currentPlayer === 'X') {
     store.currentPlayer = 'O'
@@ -25,8 +27,11 @@ const switchPlayer = function () {
   }
 }
 
+// Function for when the box gets clicked
 const boxClick = function (event) {
+  // If the html has an empty string and game isnt over
   if ($(event.target).html() === '' && store.game.over === false) {
+    // if player 1 is strictly equal to player current player
     if (store.currentPlayer === store.player1) {
       store.cells[event.target.id] = 'X'
       $(event.target).html('X')
