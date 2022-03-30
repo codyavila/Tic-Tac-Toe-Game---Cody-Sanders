@@ -6,7 +6,7 @@ const signUp = function (data) {
   // console.log(store)
   return $.ajax({
     method: 'POST',
-    url: 'https://tic-tac-toe-api-development.herokuapp.com/sign-up',
+    url: 'https://tic-tac-toe-api-production.herokuapp.com/sign-up',
     data
   })
 }
@@ -14,7 +14,7 @@ const signUp = function (data) {
 const signIn = function (data) {
   return $.ajax({
     method: 'POST',
-    url: 'https://tic-tac-toe-api-development.herokuapp.com/sign-in',
+    url: 'https://tic-tac-toe-api-production.herokuapp.com/sign-in',
     data
   })
 }
@@ -22,7 +22,7 @@ const signIn = function (data) {
 const signOut = function () {
   return $.ajax({
     method: 'DELETE',
-    url: 'https://tic-tac-toe-api-development.herokuapp.com/sign-out',
+    url: 'https://tic-tac-toe-api-production.herokuapp.com/sign-out',
     headers: {
       Authorization: 'Bearer ' + store.user.token
     }
