@@ -14,7 +14,7 @@ $(() => {
   $('#start-button').hide()
   $('#sign-up-form').on('submit', authEvents.onSignUp)
   $('#sign-in-form').on('submit', authEvents.onSignIn)
-  $('#sign-out-button').on('click', authEvents.onSignOut)
+  $('.sign-out').on('click', authEvents.onSignOut)
   // game events
   $('#game-start').on('click', gameEvents.onGameStart)
   $('.box').on('click', gameEvents.boxClick)
