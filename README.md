@@ -16,4 +16,4 @@ Project repository: https://github.com/sanderscody26/Tic-Tac-Toe-Game---Cody-San
 
 ## **First Wireframe Drawing**
 
-https://i.imgur.com/KJCHgSS.jpg
+https://i.imgur.com/Clv7BuC.jpg
